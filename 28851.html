@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enver | UI/UX Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  color: #fff;
+}
+
+/* Navbar */
+header {
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 8%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  position: relative;
+  color: #fff;
+  text-shadow: 
+    0 0 10px #a8a3ff,
+    0 0 10px #a8a3ff,
+    0 0 10px #a8a3ff;
+    
+}
+
+
+
+.hero p {
+  margin-top: 20px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: #6c63ff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #574bdb;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  width: 350px;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-5deg) translateY(-15px); }
+}
+
+/* Sections */
+section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+}
+
+.project-card p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* About */
+.about p {
+  max-width: 800px;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.contact button {
+  padding: 12px;
+  background: #6c63ff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #574bdb;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: #1e1e2f;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 50px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Enver.</div>
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>hi i am muhammad abdullah hussain</h1>
+    <p>I develope ai projects for better future  </p>
+    <a href="#projects" class="btn">Our Services →</a>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Muhammad Abdullah Hussain">
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Selected Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+  <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="">
+  <h3>AI Chatbot Assistant</h3>
+  <p>Developed an intelligent chatbot using NLP to automate customer support and improve response efficiency by 60%.</p>
+</div>
+
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a" alt="">
+  <h3>Face Recognition System</h3>
+  <p>Built a real-time face recognition system using deep learning for attendance and security applications.</p>
+</div>
+
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1581091870627-3d9c2f2c46b5" alt="">
+  <h3>Stock Price Prediction Model</h3>
+  <p>Created a machine learning model that predicts stock trends using historical financial data and LSTM networks.</p>
+</div>
+
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="">
+      <h3>Fintech App</h3>
+      <p>Improved onboarding conversion by 35% through redesign and usability testing.</p>
+    </div>
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+  <h3>AI-Powered Website Builder</h3>
+  <p>Developed a smart website platform that uses artificial intelligence to automatically generate layouts, content suggestions, and SEO optimization for businesses.</p>
+</div>
+
+  
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b" alt="">
+      <h3>SaaS Dashboard</h3>
+      <p>Built scalable design system used across multiple product teams.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I’m an AI Developer passionate about building intelligent systems that solve real-world problems. With a strong foundation in machine learning, deep learning, and data-driven architecture, I design and deploy scalable AI solutions—from predictive models and natural language processing systems to computer vision applications and generative AI tools. I enjoy transforming complex data into actionable insights and creating products that are not only technically robust but also user-focused. Constantly exploring advancements in artificial intelligence, I strive to stay at the forefront of innovation while delivering reliable, ethical, and high-performance AI solutions.
+
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Let's Work Together</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Developer Portfolio
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("active");
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  alert("Thank you! Your message has been sent.");
+}
+</script>
+
+</body>
+</html>
